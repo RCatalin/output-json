@@ -13,6 +13,6 @@ services:
         condition: on-failure
     volumes:
       - myvol:/var/tmp/output-json
-      
+
 volumes:
   myvol:
