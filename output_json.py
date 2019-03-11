@@ -7,6 +7,8 @@ from random import randint
 from datetime import datetime
 from time import sleep
 
+VERSION = None
+
 
 def create_data():
     words = ["X-ray", "cassette", "eat", "financial", "drum", "tool", "grand", "import", "seize", "needle", "liability",
@@ -20,7 +22,8 @@ def create_data():
     random_int = randint(0, 5)
     print("Random int value: %s" % random_int)
 
-    entry = {'colour': colours[random_int], 'hostname': socket.gethostname(), 'version': '1.2', 'timestamp': str(datetime.now())}
+    entry = {'colour': colours[random_int], 'hostname': socket.gethostname(), 'version': VERSION,
+             'timestamp': str(datetime.now())}
 
     # Will create a child element with elements nr = random_int
     words_entry = {}
@@ -34,7 +37,6 @@ def create_data():
 
 
 def add_json_to_file():
-
     entry = create_data()
 
     filename = "/var/tmp/output-json/output.log"
@@ -47,10 +49,14 @@ def add_json_to_file():
                 raise
 
     with open(filename, mode='a+') as json_file:
-        json_file.write(json.dumps(entry, indent=4)+"\n")
+        json_file.write(json.dumps(entry, indent=4) + "\n")
 
 
 def main():
+    global VERSION
+    f = open("VERSION", "r")
+    VERSION = f.read()
+
     try:
         while True:
             sleep(1)
