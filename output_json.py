@@ -20,7 +20,7 @@ def create_data():
     random_int = randint(0, 5)
     print("Random int value: %s" % random_int)
 
-    entry = {'colour': colours[random_int], 'hostname': socket.gethostname(), 'version': 'v1.2', 'timestamp': str(datetime.now())}
+    entry = {'colour': colours[random_int], 'hostname': socket.gethostname(), 'version': '1.2', 'timestamp': str(datetime.now())}
 
     # Will create a child element with elements nr = random_int
     words_entry = {}

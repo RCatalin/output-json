@@ -9,7 +9,9 @@ USERNAME=delutz
 IMAGE=output-json
 
 # ensure we're up to date
+git stash
 git pull
+git stash pop
 
 version=`cat VERSION`
 echo "version: $version"
