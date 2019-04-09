@@ -39,7 +39,7 @@ def create_data():
 def add_json_to_file():
     entry = create_data()
 
-    filename = "/test/output-json.log"
+    filename = "/test/output_json.log"
 
     if not os.path.exists(os.path.dirname(filename)):
         try:
