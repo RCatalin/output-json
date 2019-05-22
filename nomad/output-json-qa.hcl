@@ -66,7 +66,7 @@ job "output-json-job" {
         memory = 128 # MB
 
         network {
-          mbits = 100
+#           mbits = 100
 
           # This requests a dynamic port named "http". This will
           # be something like "46283", but we refer to it via the
