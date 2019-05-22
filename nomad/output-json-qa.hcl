@@ -73,12 +73,12 @@ job "output-json-job" {
           # label "http".
           port "http" {}
 
-          # This requests a static port on 443 on the host. This
-          # will restrict this task to running once per host, since
-          # there is only one port 443 on each host.
-          port "https" {
-            static = 443
-          }
+#           # This requests a static port on 443 on the host. This
+#           # will restrict this task to running once per host, since
+#           # there is only one port 443 on each host.
+#           port "https" {
+#              static = 443
+#           }
         }
       }
     }
