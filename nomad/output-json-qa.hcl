@@ -33,6 +33,10 @@ job "output-json-job" {
       # Configuration is specific to each driver.
       config {
         image = "delutz/output-json:latest"
+
+        volumes = [
+          /test:/test
+        ]
       }
 
       # The service block tells Nomad how to register this service
