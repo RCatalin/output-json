@@ -21,7 +21,7 @@ job "output-json-job" {
   # placed on the same host.
   group "output-json-group" {
     # Specify the number of these tasks we want.
-    count = 5
+    count = 3
 
     # Create an individual task (unit of work). This particular
     # task utilizes a Docker container to front a web application.
