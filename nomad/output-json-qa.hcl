@@ -35,7 +35,7 @@ job "output-json-job" {
         image = "delutz/output-json:latest"
 
         volumes = [
-          "/test/:/test",
+          "/test:/test",
           "${NOMAD_ALLOC_ID}.log:output-json.log"
         ]
       }
