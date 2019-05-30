@@ -47,21 +47,21 @@ def add_json_to_file():
             os.makedirs(os.path.dirname(filename))
         except OSError as exc:  # Guard against race condition
             if exc.errno != errno.EEXIST:
-                raise          
-
-    with open(filename, mode='a+') as json_file:
-        json_file.write(json.dumps(entry, indent=4) + "\n")
-
+                raise     
 
     if not os.path.exists(os.path.dirname(filename2)):
         try:
             os.makedirs(os.path.dirname(filename2))
         except OSError as exc:  # Guard against race condition
             if exc.errno != errno.EEXIST:
-                raise  
+                raise                   
 
-    with open(filename2, mode='a+') as json_file:
-        json_file.write(json.dumps(create_data, indent=4) + "\n")
+
+    with open(filename, mode='a+') as json_file:
+        json_file.write(json.dumps(entry, indent=4) + "\n")
+
+    with open(filename2, mode='a+') as json_file2:
+        json_file2.write(json.dumps(create_data, indent=4) + "\n")
 
 
 def main():
