@@ -35,7 +35,7 @@ job "output-json-job" {
         image = "delutz/output-json:latest"
 
         volumes = [
-          "/test/${NOMAD_ALLOC_NAME}:/test",
+          "/var/nexmo/logs/${NOMAD_ALLOC_NAME}:/nexmo",
         ]
       }
 
@@ -57,11 +57,11 @@ job "output-json-job" {
 
       # It is possible to set environment variables which will be
       # available to the task when it runs.
-      env {
-        "DB_HOST" = "db01.example.com"
-        "DB_USER" = "web"
-        "DB_PASS" = "loremipsum"
-      }
+      // env {
+        // "DB_HOST" = "db01.example.com"
+        // "DB_USER" = "web"
+        // "DB_PASS" = "loremipsum"
+      // }
 
       # Specify the maximum resources required to run the task,
       # include CPU, memory, and bandwidth.
