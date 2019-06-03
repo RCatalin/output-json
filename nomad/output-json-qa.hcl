@@ -35,7 +35,7 @@ job "output-json-job" {
         image = "delutz/output-json:latest"
 
         volumes = [
-          "/var/nexmo/logs/${NOMAD_ALLOC_NAME}:/nexmo",
+          "/var/tmp/nexmo/logs/${NOMAD_ALLOC_NAME}:/var/tmp/nexmo",
         ]
       }
 
