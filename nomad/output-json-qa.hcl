@@ -34,9 +34,9 @@ job "output-json-job" {
       config {
         image = "delutz/output-json:latest"
 
-        volumes = [
-          "/var/tmp/nexmo/logs/${NOMAD_ALLOC_NAME}:/var/tmp/nexmo",
-        ]
+        // volumes = [
+          // "/var/tmp/nexmo/logs/${NOMAD_ALLOC_NAME}:/var/tmp/nexmo",
+        // ]
       }
 
       # The service block tells Nomad how to register this service
