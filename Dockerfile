@@ -13,11 +13,16 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pipenv install
 
+# Create the folder structure ? POC
+RUN mkdir -p /nexmo/core/output_json/$(hostname)
+
 # Make port 80 available to the world outside this container
 #EXPOSE 80
 
 # Define environment variable
 #ENV NAME World
+
+USER nexmo
 
 # Run app.py when the container launches
 CMD ["python", "output_json.py"]
