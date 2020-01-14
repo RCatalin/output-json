@@ -6,7 +6,7 @@ RUN pip3 install pipenv
 
 # Create the folder structure ? POC
 RUN mkdir -p /var/tmp/nexmo/test
-RUN mkdir -p /var/tmp/nexmo/$(hostname)
+RUN mkdir -p /var/tmp/nexmo/${HOSTNAME}
 
 # Set the working directory to /app
 WORKDIR /app
