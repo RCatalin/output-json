@@ -15,7 +15,7 @@ RUN pipenv install
 
 # Create the folder structure ? POC
 #RUN mkdir -p /nexmo/core/output_json/$(hostname)
-RUN mkdir -p /var/tmp/nexmo
+CMD ["mkdir -p", "/var/tmp/nexmo"]
 
 # Make port 80 available to the world outside this container
 #EXPOSE 80
