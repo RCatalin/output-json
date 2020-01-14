@@ -23,7 +23,7 @@ RUN pipenv install
 # Define environment variable
 #ENV NAME World
 
-USER nexmo
+USER root
 
 # Run app.py when the container launches
 CMD ["python", "output_json.py"]
