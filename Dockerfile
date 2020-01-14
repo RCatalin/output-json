@@ -6,7 +6,7 @@ RUN pip3 install pipenv
 
 # Create the folder structure ? POC
 #RUN mkdir -p /nexmo/core/output_json/$(hostname)
-RUN mkdir -p /var/tmp/nexmo/test
+#RUN mkdir -p /var/tmp/nexmo/test
 
 # Set the working directory to /app
 WORKDIR /app
