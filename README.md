@@ -1,2 +1,2 @@
 # output-json
-This is just a testing/learning repo
+Just a small script which writes json used for testing some pipelines at work.
