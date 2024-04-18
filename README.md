@@ -1,2 +1,2 @@
 # output-json
-Just a small script which writes json used for testing some pipelines at work.
+Just a small script that writes json used for testing some pipelines at work.
