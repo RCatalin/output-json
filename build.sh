@@ -11,4 +11,3 @@ USERNAME=delutz
 IMAGE=output-json
 
 docker build -t $USERNAME/$IMAGE:latest .
-
